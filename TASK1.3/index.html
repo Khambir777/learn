@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML/CSS_Carusel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="conteiner">
+
+        <input type="radio" id="i1" name="img"  checked/>
+        <input type="radio" id="i2" name="img" />
+        <input type="radio" id="i3" name="img" />
+
+
+
+      <div class="slide_img" id="one">
+        <img
+          src="https://autoreview.ru/images/Article/1703/Article_170331_860_575.jpg" alt=""/>
+          <label for="i3" class="pre">
+              <span class="skrol_left">
+             </span>
+          </label>
+          <label for="i2" class="next">
+            <span class="skrol_right">
+            </span>
+          </label>
+          
+        
+      </div>
+
+      <div class="slide_img" id="two">
+        <img
+          src="https://cdn.motor1.com/images/mgl/2Xm0K/s3/2021-mercedes-s-class-with-mbux.webp" alt=""/>
+          <label for="i1" class="pre"></label>
+          <label for="i3" class="next"></label>
+      </div>
+
+      <div class="slide_img" id="three">
+        <img
+          src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/s-class/saloon-w222/design/interior/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile/image.MQ6.8.20190611154828.jpeg"
+          alt=""/>
+          <label for="i2" class="pre"></label>
+          <label for="i1" class="next"></label>
+      </div>
+
+<div class="nav">
+    <label class="dots" id="dot1" for="i1"></label>
+    <label class="dots" id="dot2" for="i2"></label>
+    <label class="dots" id="dot3" for="i3"></label>
+</div>
+
+
+
+    </div>
+  </body>
+</html>
