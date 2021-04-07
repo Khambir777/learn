@@ -84,7 +84,6 @@ body {
     background: #fff;
     box-shadow: 1px 2px 2px rgb(218, 216, 216);
     grid-area: main;
-    overflow: overlay;
     height: 100vh;
   }
   .main::-webkit-scrollbar {
