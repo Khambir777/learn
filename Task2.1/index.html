@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Dialog Box using jQueryUI</title>
+    <link rel="stylesheet" href="stylejs.css">
+</head>
+<body>
+
+    <button class="click">Click me</button>
+     <div class="conteiner">
+        <div id="header"> <span class="text"> Redirect............. </span>
+        
+        <button class="clickhome">x</button>
+        </div>
+        <p class="loremText"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem assumenda natus libero iure! Excepturi aperiam dolore fugiat, ipsam modi cum debitis, id voluptas, tempore voluptate distinctio atque deserunt corporis qui. </p>
+        
+        <div class="buttom">
+        <button class="yes">Yes</button>
+        <button class="no">No</button>
+    </div>
+     </div>
+    
+
+     <script
+  src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <Script>
+      $(document).ready(function(){
+          $('.click').click(function(){
+$('.conteiner').css({
+"opacity":"1", "pointer-events":"auto" 
+});
+  });
+$('.yes').click(function(){
+    $('.conteiner').css({
+    "opacity":"0", "pointer-events":"none" 
+});
+});
+$('.no').click(function(){
+    $('.conteiner').css({
+    "opacity":"0", "pointer-events":"none" 
+});
+});
+$('.clickhome').click(function(){
+    $('.conteiner').css({
+    "opacity":"0", "pointer-events":"none" 
+});
+alert('Error...');
+});
+});
+  </Script>
+    
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+.conteiner{
+   margin: 0 auto;
+   width: 450px;
+   height: 250px;
+   background: rgb(255, 255, 255);
+   overflow: hidden;
+   border-radius: 3px;
+   box-shadow: 0px 0px 0px 2px burlywood;
+  opacity: 0;
+   transition: all .3s ease-in-out; 
+}
+
+.clickhome{
+
+ font-size: 14px;
+ width: 25px;
+ height: 20px;
+ font-weight: bold;
+ text-transform: uppercase;
+ position: relative;
+    right: 10px;
+    top: 5px;
+    
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    height: 35px;
+    margin: 5px;
+    border: solid 1px rgb(134, 87, 0);
+    border-radius: 2px;
+    background: orange;
+    color: #ffff;
+}
+.text{
+    position: relative;
+    top: 6px;
+    left: 8px;
+}
+    
+.loremText{ 
+    margin-left: 11px;
+    margin-right: 10px;
+    padding-bottom: 60px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 0px 2px black;
+    border-bottom: solid 1px grey;
+}
+
+.buttom{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    bottom: 10px;
+    right: 20px;
+    
+ 
+    
+}
+.buttom button{
+    margin: 5px;
+    width: 50px;
+    height: 35px;
+    font-weight:bold;
+    font-size: 16px;
+    color: dodgerblue;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid gray;
+}
+
+button:hover{
+    border: solid 1px goldenrod;
+    background: #fffbc0;
+    color: orange;
+    cursor: pointer;
+}
+.click{
+
+    
+margin: 20px 10px;
+    background-color: rgb(233, 158, 47);
+    font-size: 16px;
+    box-shadow: 1px 0px 2px black ;
+     border-radius: 7px;
+    color: oldlace;
+
+}
