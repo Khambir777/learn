@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body>
+    <p>Data1: <input type="text" id="datepicker1" /></p>
+    <p>Data2: <input type="text" id="datepicker" /></p>
+    <p>
+      Animations
+      <select name="" id="anim">
+        <!-- види анімації для календаря-->
+        <option value="show">Show (default)</option>
+        <option value="slideDown">Slide down</option>
+        <option value="fadeIn">Fade in</option>
+        <option value="blind">Blind (UI Effect)</option>
+        <option value="bounce">Bounce (UI Effect)</option>
+        <option value="clip">Clip (UI Effect)</option>
+        <option value="drop">Drop (UI Effect)</option>
+        <option value="fold">Fold (UI Effect)</option>
+        <option value="slide">Slide (UI Effect)</option>
+        <option value>None</option>
+      </select>
+    </p>
+
+    <label for="from">From</label>
+    <input type="text" id="from" name="from" />
+    <label for="to">to</label>
+    <input type="text" id="to" name="to" />
+
+    <p>Data3: <input type="text" id="datepicker3" /></p>
+    Data: <div id="datepicker5"></div>
+
+    <script>
+      $(function () {
+        $("#datepicker1").datepicker({
+          showButtonPanel: true,
+        });
+      });
+
+      $(function () {
+        $("#datepicker").datepicker();
+        $("#anim").on("change", function () {
+          $("#datepicker").datepicker("option", "showAnim", $(this).val());
+        });
+      });
+
+      $(function () {
+        var dateFormat = "mm/dd/yy",
+          from = $("#from")
+            .datepicker({
+              defaultDate: "+1w",
+              changeMonth: true,
+              numberOfMonths: 3,
+            })
+            .on("change", function () {
+              to.datepicker("option", "minDate", getDate(this));
+            }),
+          to = $("#to")
+            .datepicker({
+              defaultDate: "+1w",
+              changeMonth: true,
+              numberOfMonths: 3,
+            })
+            .on("change", function () {
+              from.datepicker("option", "maxDate", getDate(this));
+            });
+
+        function getDate(element) {
+          var date;
+          try {
+            date = $.datepicker.parseDate(dateFormat, element.value);
+          } catch (error) {
+            date = null;
+          }
+
+          return date;
+        }
+      });
+
+      $(function () {
+        $("#datepicker3").datepicker({
+          changeMonth: true,
+          changeYear: true,
+        });
+      });
+
+$(function(){
+$("#datepicker5").datepicker();
+});
+
+    </script>
+  </body>
+</html>

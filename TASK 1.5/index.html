@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" />
+  <link
+  rel="stylesheet"
+  href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+/>
+<link rel="stylesheet" href="/resources/demos/style.css" />
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
   <div class="conteiner">
@@ -27,6 +34,8 @@
           <li><a href="./about us.html" class="About_us"> О нас </a></li>
           <li><a href="./contact.html" class="contact">Контанты</a></li>
         </ul>
+         
+<div id="datepicker5"></div>
       </nav>
     </aside>
 
@@ -172,5 +181,12 @@
 
     </footer>
   </div>
+
+
+  <script>
+    $(function(){
+ $("#datepicker5").datepicker();
+ });
+   </script>
 </body>
 </html>
