@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TASK 2.3 Implement UI Autocomplete plugin using jQuery UI</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jqery.js" />
+  </head>
+  <body>
+    <p>Data: <input type="text" id="datepicker" /></p>
+
+    <div class="ui-widget">
+      <label for="tags">
+        <input id="tags" />
+      </label>
+    </div>
+    <script>
+        //календарь//
+      $(function () {
+        $("#datepicker").datepicker({
+            changeMonth: true,
+            changeYears: true
+
+        });
+        });
+
+      // плагин автозаполнения//
+      $(function () {
+        var availableTags = [
+          "Ukraina",
+          "BMX",
+          "Comanche",
+          "Apollo",
+          "Discovery",
+          "Formula",
+          "Bianchi",
+          "Cube",
+          "TREK",
+          "Giant",
+          "Norco",
+          "Merida",
+          "GT",
+          "Focus",
+          "Pinarello",
+          "Scott",
+          "Panther",
+        ];
+        $("#tags").autocomplete({
+          source: availableTags,
+        });
+      });
+    </script>
+  </body>
+</html>
