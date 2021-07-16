@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body>
+    <div class="conteiner">
+      <h2 class="h2">One-Way Airlines: Let's make a reservation</h2>
+      <div class="datepicker">
+        <label> Pick a departure date</label>
+        <input id="datepicker" type="text" />
+      </div>
+      <div class="selectmenu1">
+        <label> Find an airoport</label> <input id="tags" type="text" />
+      </div>
+      <div class="selectmenu2">
+        <label> Meal Options </label>
+        <select id="speed" type="text">
+          <option value="">No meal</option>
+          <option value="">Breakfast</option>
+          <option value="">Breakfast and Dinner</option>
+        </select>
+      </div>
+
+      <div class="numberCheck">
+        <span> Number of bugs to check</span>
+        <div class="numberRadio">
+          <label for="numberradio1">0</label>
+          <input type="radio" name="number" id="numberradio1" />
+
+          <label for="numberradio2">1</label>
+          <input type="radio" name="number" id="numberradio2" />
+
+          <label for="numberradio3">2</label>
+          <input type="radio" name="number" id="numberradio3" />
+        </div>
+      </div>
+      <div class="cont">
+        <span> Type of seat you'd like</span>
+        <div class="checkbox">
+          <label for="radio-1">Aisle</label>
+          <input type="radio" name="radio-1" id="radio-1" />
+
+          <label for="radio-2">Window</label>
+          <input type="radio" name="radio-1" id="radio-2" />
+
+          <label for="radio-3">Exit Row</label>
+          <input type="radio" name="radio-1" id="radio-3" />
+
+          <label for="radio-4">Any seat</label>
+          <input type="radio" name="radio-1" id="radio-4" />
+        </div>
+      </div>
+
+      <button class="ui-button ui-widget ui-corner-all">
+        Button with icon on the right <span class="ui-icon ui-icon-gear"></span>
+      </button>
+    </div>
+
+    <script>
+      $(function () {
+        var availableTags = [
+          "Guangzhou Baiyun International Airport",
+          "Hartsfield–Jackson Atlanta International Airport",
+          "Dallas/Fort Worth International Airport",
+        ];
+        $("#tags").autocomplete({
+          source: availableTags,
+        });
+      });
+
+      $(function () {
+        $("#datepicker").datepicker();
+      });
+
+      $(function () {
+        $("#speed").selectmenu();
+      });
+
+      $(function () {
+        $(".checkbox input").checkboxradio({
+          icon: false,
+        });
+        $(".checkbox").controlgroup();
+      });
+
+      $(function () {
+        $(".numberRadio input").checkboxradio({
+          icon: false,
+        });
+        $(".numberRadio").controlgroup();
+      });
+    </script>
+  </body>
+</html>

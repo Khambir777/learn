@@ -1,0 +1,20 @@
+body {
+  background: rgb(253, 247, 232);
+  font-weight: bold;
+  color: rgb(107, 107, 107);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+}
+div {
+  margin-bottom: 10px;
+}
+
+.h2 {
+  border-bottom: solid gray 2px;
+}
+.conteiner {
+  margin: 20px;
+}
+.selectmenu1 label {
+  margin-left: 40px;
+}
