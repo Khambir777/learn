@@ -1,0 +1,100 @@
+body {
+  background: lightblue;
+}
+
+#gallery img {
+  cursor: move;
+}
+
+.trash {
+  margin-top: 40px;
+  padding: 10px 10px;
+  margin-left: 25%;
+  border: 3px solid gray;
+  margin-bottom: 14px;
+  width: 390px;
+  height: 90px;
+}
+
+#gallery{
+  margin-left: 25%;
+}
+
+.trashbox{
+  position: relative;
+  top: 55px;
+}
+
+.highlight {
+  border: 1px dashed #b5c051;
+  -moz-outline-radius: 10px;
+}
+
+.highlight-accept {
+  background: #d9dfa4;
+}
+
+#content {
+  position: relative;
+  top: 130px;
+}
+
+.block_sorable {
+  margin: 0 auto;
+  margin-top: 30px;
+  border: 3px solid rgb(107, 16, 16);
+  width: 750px;
+  height: 400px;
+  background: #ffff;
+  overflow:-moz-hidden-unscrollable;
+}
+ul {
+  padding-left: 0;
+  position: relative;
+  bottom: 15px;
+}
+li {
+  padding: 0;
+  list-style-type: none;
+  height: 40px;
+}
+
+.color1 {
+  background: green;
+}
+.color2 {
+  background: blue;
+}
+.color3 {
+  background: orange;
+}
+.color4 {
+  background: pink;
+}
+.color5 {
+  background: rgb(230, 247, 4);
+}
+.color6 {
+  background: red;
+}
+.color7 {
+  background: #530ac1;
+}
+
+.efectsmoke {
+  overflow: hidden;
+  margin: auto;
+ position: fixed;
+  bottom: 10em;
+  z-index:-1;
+  width: 250px;
+  height: 100px;
+
+
+}
+
+#smoke{
+ 
+  
+  width: 100px;
+}

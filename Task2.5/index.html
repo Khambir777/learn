@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <link rel="stylesheet" href="./jquery-ui-1.12.1.custom/jquery-ui.theme.min.css"/>
+    <link rel="stylesheet" href="./jquery-ui-1.12.1.custom/jquery-ui.theme.css"/>
+    <link rel="stylesheet" href="./jquery-ui-1.12.1.custom/jquery-ui.css" />
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/Task2.5/"></script>
+    <title>Task2.5</title>
+  </head>
+  <body>
+    <div class="conteiner">
+      <div class="block_sorable">
+        <ul id="sortable">
+          <li class="color1"></li>
+          <li class="color2"></li>
+          <li class="color3"></li>
+          <li class="color4"></li>
+          <li class="color5"></li>
+          <li class="color6"></li>
+          <li class="color7"></li>
+        </ul>
+      </div>
+
+      <div class="trash">
+        <div class="trashbox">
+          <img src="trash.png" alt="trash" />
+          <span id="trash-title">Drag images here to delete</span>
+        </div>
+      </div>
+      <div class="delete_img">
+      <div id="gallery">
+        <img id="img1" src="fader_100.jpg" />
+        <img id="img1" src="beau_100.jpg" />
+        <img id="img1" src="glenda_100.jpg" />
+        <img id="img1" src="mofat_100.jpg" />
+  <div class="efectsmoke">
+          <img id="smoke" src="./epuff.png" alt="ефект дима" />
+        </div>
+       
+     </div>
+    </div>
+    </div>
+
+    <script>
+      $(function () {
+        $("#sortable").sortable({
+          revent: true,
+        });
+    
+        // є галерея і мусорка
+        var $gallery = $("#gallery"),
+          $trash = $(".trash");
+
+        $("#gallery #img1").draggable({
+          revert: "invalid",
+          containment: "document",
+          helper: "clone",
+          cursor: "move",
+               
+        });
+
+        $trash.droppable({
+          classes: {
+            "ui-droppable-active": "ui-state-highlight",
+          },
+          drop: function (event, ui) {
+            deleteImage(ui.draggable)                
+               }, 
+
+             //  transition
+               
+             //  setInterval(() => {
+                 
+             //  }, interval); 
+               
+        });
+
+        var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
+        function deleteImage($item) {
+          $item.fadeOut(function () {
+            var $list = $("$trash").length;
+
+            $item.find("a.ui-icon-trash").remove();
+            $item.append(recycle_icon);
+            
+                      
+          });
+        }
+                
+      });
+
+    </script>
+  </body>
+</html>
