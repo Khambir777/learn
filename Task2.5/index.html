@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./jquery-ui-1.12.1.custom/jquery-ui.theme.css"/>
     <link rel="stylesheet" href="./jquery-ui-1.12.1.custom/jquery-ui.css" />
 
-
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="/Task2.5/"></script>
@@ -41,11 +40,7 @@
         <img id="img1" src="fader_100.jpg" />
         <img id="img1" src="beau_100.jpg" />
         <img id="img1" src="glenda_100.jpg" />
-        <img id="img1" src="mofat_100.jpg" />
-  <div class="efectsmoke">
-          <img id="smoke" src="./epuff.png" alt="ефект дима" />
-        </div>
-       
+        <img id="img1" src="mofat_100.jpg" />     
      </div>
     </div>
     </div>
@@ -73,27 +68,18 @@
             "ui-droppable-active": "ui-state-highlight",
           },
           drop: function (event, ui) {
-            deleteImage(ui.draggable)                
-               }, 
-
-             //  transition
-               
-             //  setInterval(() => {
-                 
-             //  }, interval); 
-               
+            deleteImage(ui.draggable) 
+                    
+               },               
         });
 
         var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
         function deleteImage($item) {
           $item.fadeOut(function () {
             var $list = $("$trash").length;
-
             $item.find("a.ui-icon-trash").remove();
-            $item.append(recycle_icon);
-            
-                      
-          });
+            $item.append(recycle_icon);       
+            });
         }
                 
       });
