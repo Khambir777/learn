@@ -8,13 +8,11 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" />
-  <link
-  rel="stylesheet"
-  href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-/>
-<link rel="stylesheet" href="/resources/demos/style.css" />
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <link rel="stylesheet" href="./slick/slick.css">
+  <link rel="stylesheet" href="./slick/slick-theme.css">
+<script src="./jquery-3.6.0.min.js"></script>
+<script src="./slick/slick.min.js"></script>
 </head>
 <body>
   <div class="conteiner">
@@ -52,9 +50,13 @@
 
     <h2 class="name_product">Explore the new arrivals, updated weekly</h2>
       <div class="content_main">
-        <a href="#" class="product_bike1">
+        <div class="product_bike1">
           <div class="img_product">
             <img src="./img/PRIDE MARVEL 7.1.jpg" alt="" />
+            <img src="./img/Cube Reaction Hybrid Performance 500.jpg" alt="" />
+            <img src="./img/PRIDE SPROCKET 8.1.jpg" alt="" />
+            <img src="./img/unnamed 4img.jpg" alt="" />
+          
           </div>
           <div class="conteiner_product">
             <div class="name_bike">
@@ -67,11 +69,12 @@
               <p>See mountain bike</p>
             </div>
           </div>
-        </a>
+        </div>
 
         <a href="#" class="product_bike2">
           <div class="img_product">
             <img src="./img/PRIDE SPROCKET 8.1.jpg" alt="" />
+         
           </div>
           <div class="conteiner_product">
             <div class="name_bike">
@@ -88,10 +91,7 @@
 
         <a href="#" class="product_bike3">
           <div class="img_product">
-            <img
-              src="./img/Cube Reaction Hybrid Performance 500.jpg"
-              alt=""
-            />
+            <img src="./img/Cube Reaction Hybrid Performance 500.jpg" alt=""/>
           </div>
           <div class="conteiner_product">
             <div class="name_bike">
@@ -185,8 +185,12 @@
 
   <script>
     $(function(){
- $("#datepicker5").datepicker();
+      $('.img_product').slick({
+        arrows: false,
+        dots: true,
+      });
  });
+
    </script>
 </body>
 </html>

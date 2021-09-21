@@ -1,0 +1,17 @@
+
+body{
+    background: lightslategray                        ;
+}
+
+   .conteiner{
+    position: relative;
+    top: 50px;
+    width: 350px;
+     margin: 0 auto;
+
+}
+
+   .slider_img img{
+width: 350px;
+overflow: hidden;
+   }

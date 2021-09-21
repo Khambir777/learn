@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task2.9</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./slick/slick.css" />
+    <link rel="stylesheet" href="./slick/slick-theme.css" />
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+  </head>
+  <body>
+    <div class="conteiner">
+         
+     <div class="slider">
+  <div class="slider_img"> <img src="./image/foto2.jpg" alt=""> </div>
+
+      </div>  
+     <div class="slider">
+  <div class="slider_img"> <img src="./image/foto3.jpg" alt=""> </div>
+
+      </div>  
+     <div class="slider">
+  <div class="slider_img"> <img src="./image/foto5.jpg" alt=""> </div>
+  
+</div>  
+    </div> 
+<script>
+
+      $(function () {
+        $(".conteiner").slick({
+            arrows: true,
+          dots: true,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: "linear",
+          waitForAnimate:false
+        });
+      });
+    </script>
+  </body>
+</html>
